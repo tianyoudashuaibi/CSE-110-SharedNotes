@@ -74,6 +74,7 @@ public class NoteActivity extends AppCompatActivity {
             assert updatedNote != null;
 
             updatedNote.content = updatedContent;
+            updatedNote.version = System.currentTimeMillis();
 
             viewModel.save(updatedNote);
         });
